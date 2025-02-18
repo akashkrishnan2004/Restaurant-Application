@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.center-logo {
+  display: none;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* padding: 1rem 3rem; */
+  background-color: rgba(18, 22, 24, 0.95);
+  color: white;
+  width: 100%;
+  padding: 35px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  position: relative;
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  left: 10%;
+  top: 72%;
+}
+
+img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.deep {
+  color: #007bff;
+}
+
+.net {
+  color: white;
+}
+
+.soft {
+  color: gray;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  list-style: none;
+  position: relative;
+  left: 70%;
+  top: 30px;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s, background-color 0.3s, text-shadow 0.3s;
+}
+.nav-links-mobile a {
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, text-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.mobile-menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .mainlogo {
+    display: none;
+  }
+  .center-logo {
+    display: block;
+  }
+  .navbar {
+    position: relative;
+    padding: 10px;
+  }
+  .center-logo img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .logo-text {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .nav-links-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(18, 22, 24, 0.95);
+    padding: 20px;
+    margin-top: 1.5rem;
+    gap: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: slideIn 0.3s ease-out;
+    z-index: 1000;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+}

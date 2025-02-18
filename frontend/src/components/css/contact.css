@@ -1,0 +1,91 @@
+.contactBody {
+  /* background-color: rgba(18, 22, 24, 0.95); */
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* padding: 1rem; */
+  color: white;
+  gap: 25px;
+  padding: 60px;
+}
+
+.contactBodyGrid1,
+.contactBodyGrid2,
+.contactBodyGrid3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px;
+  height: 100px;
+  /* width: 200px; */
+}
+
+.contactBodyGrid1 p {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+}
+
+.contactBodyGrid1 p i {
+  color: rgb(142, 142, 29);
+}
+
+.contactBodyGrid1 span {
+  color: rgb(153, 150, 150);
+}
+
+.contactBodyGrid2 {
+  position: relative;
+}
+
+.contactBodyGrid2 img {
+  position: absolute;
+  /* bottom: 65px; */
+  bottom: 75%;
+  /* left: 45%; */
+  /* background-color: rgba(18, 22, 24, 0.95); */
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icons i {
+  /* color: rgb(142, 142, 29); */
+}
+
+.contactBodyGrid1 h5 {
+  color: #007bff;
+  padding-bottom: 5px;
+}
+
+.contactBodyGrid2 h1 {
+  padding-bottom: 5px;
+}
+
+.contactBodyGrid3 h4 {
+  color: #007bff;
+  padding-bottom: 5px;
+}
+
+.contactBodyGrid3 p {
+  text-align: center;
+}
+
+.contactBodyGrid3 span {
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .contactBody {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contactBodyGrid2 h1 {
+    font-size: 20px;
+  }
+}
