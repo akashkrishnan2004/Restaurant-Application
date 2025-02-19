@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import glass1 from "./images/glass1.png"
 import glass2 from "./images/glass2.png"
+import API_URL from "./service";
 
 export default function Items({ selectedCategory }) {
   const [menus, setMenus] = useState([]);
@@ -11,7 +12,7 @@ export default function Items({ selectedCategory }) {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/getmenus");
+        const response = await axios.get(`${API_URL}/getmenus`);
         setMenus(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -53,7 +54,6 @@ export default function Items({ selectedCategory }) {
                 <div key={item._id} className="itemCard">
                   <p className="itemName">{item.name}.................${item.price}</p>
                   <p className="itemDescription">{item.description}</p>
-                  {/* <p className="itemPrice">${item.price}</p> */}
                 </div>
               ))
             ) : (

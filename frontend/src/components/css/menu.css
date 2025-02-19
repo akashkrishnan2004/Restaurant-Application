@@ -36,7 +36,6 @@
 .menuBodyBtnSection .foodBtn,
 .drinksBtn,
 .brunchBtn {
-  /* padding: 13px 35px; */
   height: 40px;
   width: 100px;
   background-color: rgba(18, 22, 24, 0.95);
@@ -48,7 +47,6 @@
 .menuBodyBtnSection .foodBtn:hover,
 .drinksBtn:hover,
 .brunchBtn:hover {
-  /* background-color: rgb(0, 139, 255, 255); */
   background-color: #007bff;
   cursor: pointer;
 }

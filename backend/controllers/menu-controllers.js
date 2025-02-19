@@ -1,26 +1,14 @@
 import Menu from "../models/menuModel.js";
 import MenuItem from "../models/menuItemModel.js";
 
-// @desc   Get all menus
-// @route  GET /api/menus
-// @access Public
-// export const getMenus = async (req, res) => {
-//   try {
-//     const menus = await Menu.find().populate("items"); // Fetch menus with items
-//     res.status(200).json(menus);
-//   } catch (error) {
-//     res.status(500).json({ message: "Error fetching menus", error });
-//   }
-// };
-
 export const getMenus = async (req, res) => {
   try {
-    const menus = await Menu.find() // Fetch menus with items
-    console.log(" Menus Fetched:", menus); // Debugging log
+    const menus = await Menu.find()
+    console.log(" Menus Fetched:", menus);
 
     res.status(200).json(menus);
   } catch (error) {
-    console.error("❌ Error fetching menus:", error); // Log the error
+    console.error("❌ Error fetching menus:", error);
     res.status(500).json({ message: "Error fetching menus", error });
   }
 };
@@ -36,10 +24,6 @@ export const getMenuItems = async (req, res) => {
   }
 };
 
-
-// @desc   Get a single menu by ID
-// @route  GET /api/menus/:id
-// @access Public
 export const getMenuById = async (req, res) => {
   try {
     const menu = await Menu.findById(req.params.id).populate("items");
@@ -50,9 +34,6 @@ export const getMenuById = async (req, res) => {
   }
 };
 
-// @desc   Create a new menu
-// @route  POST /api/menus
-// @access Private/Admin
 export const createMenu = async (req, res) => {
   try {
     const { name, description, items } = req.body;
@@ -64,9 +45,6 @@ export const createMenu = async (req, res) => {
   }
 };
 
-// @desc   Update a menu
-// @route  PUT /api/menus/:id
-// @access Private/Admin
 export const updateMenu = async (req, res) => {
   try {
     const { name, description, items } = req.body;
@@ -84,9 +62,6 @@ export const updateMenu = async (req, res) => {
   }
 };
 
-// @desc   Delete a menu
-// @route  DELETE /api/menus/:id
-// @access Private/Admin
 export const deleteMenu = async (req, res) => {
   try {
     const menu = await Menu.findByIdAndDelete(req.params.id);
@@ -97,9 +72,6 @@ export const deleteMenu = async (req, res) => {
   }
 };
 
-// @desc   Add an item to a menu
-// @route  POST /api/menus/:id/items
-// @access Private/Admin
 export const addItemToMenu = async (req, res) => {
   try {
     const { itemId } = req.body;

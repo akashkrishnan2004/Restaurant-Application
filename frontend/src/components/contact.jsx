@@ -3,7 +3,6 @@ import Logo from "./images/logo3.png";
 export default function Contact() {
   return (
     <div className="contactBody" id="contact">
-      {/* <h1>Contact</h1> */}
       <div className="contactBodyGrid1">
         <h5>CONNECT WITH US</h5>
         <p>

@@ -1,11 +1,5 @@
-// services/api.js
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = 'http://localhost:5000/api';
 
-export const fetchMenus = async () => {
-  const response = await axios.get(`${API_URL}/menus`);
-  return response.data;
-};
-
-// Other API functions...
+export default API_URL
