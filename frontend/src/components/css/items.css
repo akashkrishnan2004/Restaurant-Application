@@ -94,3 +94,10 @@
     transform: translateX(45%);
   }
 }
+
+@media (max-width: 900px) {
+  .itemsBodyContainer {
+    width: 300px;
+    padding-top: 30px;
+  }
+}
