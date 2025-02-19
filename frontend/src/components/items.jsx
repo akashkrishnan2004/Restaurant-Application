@@ -57,7 +57,7 @@ export default function Items({ selectedCategory }) {
                 </div>
               ))
             ) : (
-              <p>No items found for this category.</p>
+              <p className="no-data">No items found for this category.</p>
             )}
           </div>
         )}

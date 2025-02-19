@@ -1,7 +1,9 @@
 .itemsBody {
   height: 50vh;
   width: 100%;
-  background-image: url("../images/item-bg.jpg");
+  /* background-image: url("../images/item-bg.jpg"); */
+  /* background-color: rgba(31, 35, 37, 0.95); */
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -62,12 +64,16 @@
 }
 
 .itemDescription {
-    font-size: 18px;
+  font-size: 18px;
+}
+
+.no-data {
+  text-align: center;
 }
 
 @media (max-width: 900px) {
   .itemsBody {
-    background-image: url("../images/item-bg2.jpg");
+    /* background-image: url("../images/item-bg2.jpg"); */
     background-size: cover;
     padding: 10rem;
   }
@@ -80,7 +86,7 @@
   }
   .glass1 {
     position: absolute;
-    height: 20vh;
+    height: 15vh;
     left: 10px;
     top: -55%;
     transform: translateX(-40%);
@@ -88,8 +94,8 @@
 
   .glass2 {
     position: absolute;
-    height: 20vh;
-    right: 25px;
+    height: 15vh;
+    right: 20px;
     bottom: -45%;
     transform: translateX(45%);
   }
