@@ -98,6 +98,14 @@ img {
     transform 0.3s ease;
 }
 
+.nav-links a:hover {
+  color: #007bff;
+}
+
+.nav-links-mobile a:hover {
+  color: #007bff;
+}
+
 .mobile-menu-icon {
   display: none;
   font-size: 1.8rem;
